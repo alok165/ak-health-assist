@@ -8,20 +8,36 @@ load_dotenv()
 # Set up the client with API key (new google.genai SDK)
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# Define a prompt for the model
-prompt = "What is your name?"
+# System prompt — defines the AI's role and behaviour
+SYSTEM_PROMPT = (
+    "You are a compassionate health assistant AI. "
+    "Your role is to ask the user about their symptoms one at a time, "
+    "gather details such as onset, duration, and severity, "
+    "then provide possible causes in plain language. "
+    "Always remind the user to consult a qualified doctor. "
+    "Never diagnose definitively or prescribe medication."
+    "If the user mentions any red flag symptoms (e.g., chest pain, severe headache, difficulty breathing), "
+    "prompt them to seek immediate medical attention."
+)
 
-# print("the list of models available are:")
-# models = client.models.list()
+# Display system prompt so the developer can see it
+print("=" * 60)
+print("SYSTEM PROMPT:")
+print(SYSTEM_PROMPT)
+print("=" * 60)
 
-# for model in models:
-#     if hasattr(model, 'supported_actions') and "generateContent" in (model.supported_actions or []):
-#         print("-", model.name)
-
-#Start a chat session and send a message 
+# Start a chat session with the system prompt passed as system_instruction
 chat = client.chats.create(
     model="gemini-2.0-flash-lite",
-    config={"temperature": 0.7},
+    config={
+        "temperature": 0.7,
+        "system_instruction": SYSTEM_PROMPT,
+    },
 )
-response = chat.send_message(prompt)
-print(response.text)
+
+# Take user input and send it to the model
+user_input = input("\nPlease describe your health concern: ")
+
+# Send the user input to the model and print the response
+response = chat.send_message(f"The patient's concern is: {user_input}")
+print(f"\nAI Response:\n{response.text}")
