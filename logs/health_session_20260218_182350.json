@@ -1,0 +1,10 @@
+{
+  "initial_complaint": "I'm having headache",
+  "symptom_analysis": "Okay, I will analyze the patient's description.\n\n**Patient Description:** \"I'm having headache\"\n\n**Symptom Analysis:**\n\n*   **Primary Symptom:** Headache\n*   **Implied Symptoms:** None (based on the provided information)\n*   **Body Systems Affected:** Nervous System (specifically the head/brain)\n*   **Urgency Level:** Low (as the description only mentions a headache without any other details)\n*   **Red Flags:** None detected.\n",
+  "initial_summary": "The patient reports experiencing a headache. No other symptoms or details are provided. This is a common complaint. Always consult with a qualified doctor for a proper evaluation.\n",
+  "followup_questions": "Okay, I understand. Here are three follow-up questions to help gather more information about the patient's headache:\n\n1.  \"Could you describe the headache for me? For example, where is the pain located, and what does it feel like – is it a throbbing, sharp, dull, or pressing pain?\"\n2.  \"When did the headache start, and how long does it usually last? Is this a new type of headache for you, or have you experienced similar headaches before?\"\n3.  \"Are there any factors that seem to trigger or worsen the headache, or anything that makes it feel better? For instance, does it get worse with activity, or does rest help?\"\n",
+  "followup_answers": "pressing pain on left side of forehead",
+  "final_summary": "The patient reports experiencing a headache. The pain is described as a pressing sensation on the left side of the forehead. No other symptoms are mentioned. It is important to consult a qualified doctor for a proper evaluation.\n",
+  "session_id": "20260218_182350",
+  "logged_at": "2026-02-18T18:23:50.157779"
+}

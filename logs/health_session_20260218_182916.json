@@ -1,0 +1,48 @@
+{
+  "conversation": [
+    {
+      "role": "user",
+      "content": "Im having chest pain"
+    },
+    {
+      "role": "assistant",
+      "content": "I am so sorry to hear you're experiencing chest pain; that sounds very frightening. To understand what might be happening, could you tell me when this chest pain started?\n"
+    },
+    {
+      "role": "user",
+      "content": "its just started 5 mins back"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for letting me know. Since the pain is new, can you describe the chest pain? Is it a sharp, stabbing pain, or more of a pressure or squeezing sensation?\n"
+    },
+    {
+      "role": "user",
+      "content": "sharp"
+    },
+    {
+      "role": "assistant",
+      "content": "I understand. Could you please rate the severity of your sharp chest pain on a scale of 1 to 10, with 1 being very mild and 10 being the most severe pain imaginable?\n"
+    },
+    {
+      "role": "user",
+      "content": "6"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you. Does the sharp chest pain radiate or spread to any other areas of your body, such as your arm, jaw, neck, or back?\n"
+    },
+    {
+      "role": "user",
+      "content": "neck"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you for sharing that information. Given your sharp chest pain, its severity, and that it's radiating to your neck, I strongly recommend that you seek immediate medical attention. Please call emergency services or go to the nearest emergency room right away. I am just an AI and cannot provide medical advice. It's essential to consult with a qualified healthcare professional for an accurate diagnosis and appropriate treatment.\n"
+    }
+  ],
+  "symptom_analysis": "*   **Primary Symptom:** Chest pain\n*   **Implied Symptoms:** None\n*   **Body Systems Affected:** Cardiovascular\n*   **Urgency Level:** EMERGENCY\n",
+  "final_summary": "The patient's chief complaint is sharp chest pain. The pain began 5 minutes ago and is rated as a 6 out of 10 in severity. The pain radiates to the neck. Given the nature and characteristics of the chest pain, immediate medical attention is strongly recommended. The patient should call emergency services or go to the nearest emergency room immediately. This summary is for informational purposes only, and it is crucial to consult a qualified doctor for diagnosis and treatment.\n",
+  "session_id": "20260218_182916",
+  "logged_at": "2026-02-18T18:29:16.034893"
+}
