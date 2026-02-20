@@ -1,6 +1,8 @@
 # AK Health Assist — Multi-Agent AI Health Chatbot
 
-A terminal-based health assistant powered by **4 specialised Gemini AI agents** that collaborate to conduct a conversational symptom assessment, generate a clinical summary, and save a full audit log of every session.
+A health assistant powered by **4 specialised Gemini AI agents** that collaborate to conduct a conversational symptom assessment, generate a clinical summary, and save a full audit log of every session.
+
+Available as both a **terminal CLI** and a **Streamlit web UI**.
 
 > **Disclaimer:** This tool is for informational purposes only and is **not** a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified doctor.
 
@@ -10,7 +12,8 @@ A terminal-based health assistant powered by **4 specialised Gemini AI agents** 
 
 ```
 ak-health-assist/
-├── basic-chat-gemini.py   # Main script — 4 agents + orchestrator
+├── basic-chat-gemini.py   # CLI script — 4 agents + orchestrator
+├── streamlit_app.py       # Streamlit web UI (imports from above)
 ├── logs/                  # Auto-created at runtime; one JSON log per session
 ├── requirements.txt       # Python dependencies
 ├── .env                   # API key (not committed to git)
@@ -33,7 +36,7 @@ ak-health-assist/
 ## How It Works — Full Flow
 
 ```
-User launches: python basic-chat-gemini.py
+User launches app (CLI or Streamlit)
          |
          v
 +-------------------------------+
@@ -91,7 +94,7 @@ User launches: python basic-chat-gemini.py
 
 The conversation loop ends when **either** condition is met:
 
-### User-triggered — type any of these at the `You:` prompt:
+### User-triggered — type any of these:
 ```
 goodbye   bye   exit   quit   stop   end
 ```
@@ -169,14 +172,26 @@ Get a free API key (1500 req/day) from [Google AI Studio](https://aistudio.googl
 
 > Keys from the Google Cloud Console may show `limit: 0` on the free tier. Use AI Studio keys for free-tier access.
 
-### 5. Run the chatbot
+---
+
+## Running the App
+
+### Option A — Streamlit Web UI (recommended)
+```bash
+streamlit run streamlit_app.py
+```
+
+Opens in your browser at `http://localhost:8501`. Features:
+- Welcome form to describe your symptoms
+- Live chat interface with message bubbles
+- Collapsible symptom analysis panel (Agent 1)
+- Automatic session summary at the end (Agent 2)
+- Sidebar showing session status and exchange count
+
+### Option B — Terminal CLI
 ```bash
 python basic-chat-gemini.py
 ```
-
----
-
-## Example Session
 
 ```
 ============================================================
